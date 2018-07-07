@@ -1,0 +1,7 @@
+Close on Action Button Selected: <input type="checkbox" [(ngModel)]="CloseOnActionSelected"/>
+Close on Click Outside: <input type="checkbox" [(ngModel)]="CloseOnClickOutside"/>
+<acid-fab Icon="bars icon" [CloseOnActionSelected]="CloseOnActionSelected" [ClickOutsideCloseMenu]="CloseOnClickOutside" BackgroundColor="#3498db">
+    <fab-action Title="Share" Icon="share alternate icon" (Click)="OnActionButtonClicked($event)" BackgroundColor="#2ecc71"></fab-action>
+    <fab-action Title="Delete" Icon="trash icon" (Click)="OnActionButtonClicked($event)" BackgroundColor="#ff7675" IsDestructive="true"></fab-action>
+    <fab-action Title="User Profile" Icon="user outline icon" (Click)="OnActionButtonClicked($event)" BackgroundColor="#badc58"></fab-action>
+</acid-fab>

@@ -1,0 +1,68 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/icon.min.css'); 
+
+.fab{
+  $diameter: 70px;
+  width: $diameter;
+  height: $diameter;
+  bottom: calc(5% + #{$diameter}*0.44); 
+  right: calc(5% + #{$diameter}*0.45);
+  z-index: 10;
+}
+
+.fab,.acid-fab_item{
+  display: flex;
+  position: fixed;
+  background: #7474BF;
+  border-radius: 100px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition: .4s;
+}
+
+.acid-fab_item{
+  $fab_diameter: 70px;
+  $diameter: 44px;
+  width: $diameter;
+  height: $diameter;
+  bottom: calc(5% + #{$diameter}); 
+  right: calc(5% + #{$diameter});
+  z-index: 9;
+  
+  @for $i from 1 through 4{
+    &.active:nth-child(#{$i}){
+      bottom: calc(5% + #{$diameter}*#{$i}*1.2 + #{$diameter} + 20px);
+    }
+  }
+  p{
+   background: #333;
+   padding: 4px 6px;
+   border-radius: 2px;
+   color: white;
+   opacity: 0;
+   font-size: 14px;
+   font-weight: bold;
+   font-family: 'Lato'; 
+   position: absolute;
+   white-space: nowrap;
+   right: 55px;
+   top: 6px;
+   transition: .4s
+  }
+  &.active p{
+    opacity: 1;
+  }
+}
+
+
+
+.fab i, .acid-fab_item i{
+  margin: auto;
+  color: white;
+  transition: .4s;
+  &.icon {
+    height: 1.5em;
+  }
+}
+
+.fab.active i{
+     transform: rotateZ(45deg);
+}

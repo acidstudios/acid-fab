@@ -1,0 +1,18 @@
+<div class="fab" (click)="OnFloaterClicked()"
+[style.background-color]="BackgroundColor">
+    <i id="fab_icon" [ngClass]="Icon"></i>
+</div>
+<div>
+    <!-- Items -->
+    <div 
+      *ngFor="let action of fabActionButtons" 
+      class="acid-fab_item"
+      (click)="OnFloaterActionButtonClicked(action)"
+      [style.background-color]="action.IsDestructive ? '#e74c3c' : action.BackgroundColor"
+      [class.active]="isMenuDisplayed">
+        <p>{{ action.Title }}</p>
+        <i id="fab_item_icon" [ngClass]="action.Icon"></i>
+    </div>
+    <!-- /Items -->
+</div>
+  

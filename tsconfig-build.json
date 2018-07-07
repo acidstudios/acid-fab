@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+        "rootDir": ".",
+        "baseUrl": ".",
+        "paths": {
+            "@angular/*": [
+                "../../node_modules/@angular/*"
+            ],
+            "@rxjs/*": [
+                "../../node_modules/rxjs/*"
+            ]
+        },
+        "outDir": "../",
+        "declaration": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "moduleResolution": "node",
+        "module": "es2015",
+        "target": "es2015",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "skipLibCheck": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "inlineSources": true,
+        "importHelpers": true,
+        "types": [
+            "webpack-env"
+        ]
+    },
+    "files": [
+        "public_api.ts",
+        "../../node_modules/zone.js/dist/zone.js.d.ts"
+    ],
+    "angularCompilerOptions": {
+        "enableResourceInlining": true,
+        "skipTemplateCodegen": true,
+        "annotateForClosureCompiler": true,
+        "strictMetadataEmit": true,
+        "flatModuleOutFile": "acid-fab.js",
+        "flatModuleId": "acid-fab"
+    }
+}
